@@ -25,7 +25,7 @@ pipeline
 				   {
 				    branch "master"
 				  }
-				  step
+				  steps
 				  {
 				  	echo 'we are in master branch'
 				  }			  
