@@ -17,6 +17,17 @@ pipeline
 					input('Do You Want to Proceed')
 					}
 				}
+			  stage('Three')
+			  steps
+			  {
+				  when
+				   {
+				    branch "master"
+				  }
+				  step
+				  {
+				  	echo 'we are in master branch'
+				  }			  
 		  }
 				
 
