@@ -12,48 +12,11 @@ pipeline
 				}   }
 				stage('two')
 				{
+					steps
+					{
 					input('Do You Want to Proceed')
+					}
 				}
-				stage('three')
-				{
-					when{
-							not 
-							{
-								branch "master"
-							}
-						}
-							steps
-							{
-								echo 'Hi This is not master branch'
-							}
-					
-				}
-				stage('four')
-				{
-					parallel{
-							stage('Unit Testing')
-							{
-								steps {
-							  
-											echo 'Unit testing.......'
-								      }
-							}
-							stage('Integration Testing')
-							{
-								steps {
-							  
-											echo 'Running Integration testing.......'
-									  }
-							}
-							
-							
-							}
-				}
-		  
-		  }
-		  
-			
-
-
+				
 
 }
