@@ -19,18 +19,28 @@ pipeline
 				}
 			  stage('Three')
 			  {
-			  steps
-			  	{
-				  when
-				   {
-				    branch "master"
-				  }
-				  steps
-				  {
-				  	echo 'we are in master branch'
-				  }			  
+			  
+				  when 
+					{ 
+						branch 'master' 
+					}
+    					steps 
+					{ 
+       						 echo 'I only execute on the master branch.' 
+   					}
+				  
+					when { 
+						not 
+						{ 
+							branch 'master'
+						} 
+					}
+					steps
+				  	{
+				  	echo 'we are not in master branch'
+				  	}			  
 		 		}
-			  }
+			  
 		  }
 				
 
