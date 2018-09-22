@@ -17,10 +17,9 @@ pipeline
 					input('Do You Want to Proceed')
 					}
 				}
-			  stage('Three')
+			  stage('three')
 			  {
-			  
-				  when 
+			  	  when 
 					{ 
 						branch 'master' 
 					}
