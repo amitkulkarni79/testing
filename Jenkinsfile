@@ -19,7 +19,7 @@ pipeline
 				}
 			  stage('three')
 			  {
-			  	  when { branch 'master' }
+				  when { not {branch 'master' } }
    						 steps { 
         						echo 'I only execute on the master branch.' 
    							 }
