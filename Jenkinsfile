@@ -28,16 +28,7 @@ pipeline
        						 echo 'I only execute on the master branch.' 
    					}
 				  
-					when { 
-						not 
-						{ 
-							branch 'master'
-						} 
-					}
-					steps
-				  	{
-				  	echo 'we are not in master branch'
-				  	}			  
+								  
 		 		}
 			  
 		  }
