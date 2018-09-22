@@ -18,8 +18,9 @@ pipeline
 					}
 				}
 			  stage('Three')
-			  steps
 			  {
+			  steps
+			  	{
 				  when
 				   {
 				    branch "master"
@@ -28,6 +29,8 @@ pipeline
 				  {
 				  	echo 'we are in master branch'
 				  }			  
+		 		}
+			  }
 		  }
 				
 
